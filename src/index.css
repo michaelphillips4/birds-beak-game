@@ -36,6 +36,12 @@ h1 {
   font-size: larger;
 }
 
+
+footer {
+ margin-top: 10vh;
+}
+
+
 button {
   background-color: #6c7270;
   border: none;

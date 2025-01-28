@@ -22,13 +22,14 @@ function App() {
 
   return (
     <article className="game">
-      <h1>What Birds Eat Game</h1>
+   
       {game.gameOver() ? (
         <Results questions={game.getResults()} newGameClickHandler={newGame} />
       ) : (
         <Question onclick={handelAnswerClicked} question={question} />
       )}
     </article>
+
   );
 }
 
