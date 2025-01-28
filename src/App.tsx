@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Results from "./Results";
+import Question from "./Question";
+import Game from "./GameManager/Game";
+const game = new Game();
+const defaultQuestion = game.nextQuestion();
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [question, setQuestion] = useState(defaultQuestion);
+
+  const handelAnswerClicked = (answer: number) => {
+    if (question) {
+      game.setQuestionIsCorrect(answer);
+    }
+    setQuestion(game.nextQuestion());
+  };
+
+  const newGame = () => {
+    game.startNewGame();
+    setQuestion(game.nextQuestion());
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <article className="game">
+      <h1>What Birds Eat Game</h1>
+      {game.gameOver() ? (
+        <Results questions={game.getResults()} newGameClickHandler={newGame} />
+      ) : (
+        <Question onclick={handelAnswerClicked} question={question} />
+      )}
+    </article>
+  );
 }
 
-export default App
+export default App;
