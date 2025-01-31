@@ -1,0 +1,1 @@
+export const filesURL = "https://area2-documentsstore.s3.eu-west-2.amazonaws.com/";

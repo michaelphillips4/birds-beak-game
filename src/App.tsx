@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState} from "react";
 import Results from "./Results";
 import Question from "./Question";
 import Game from "./GameManager/Game";
+//import ShowAll from "./ShowAll";
 const game = new Game();
 const defaultQuestion = game.nextQuestion();
 
 function App() {
   const [question, setQuestion] = useState(defaultQuestion);
+  
 
   const handelAnswerClicked = (answer: number) => {
     if (question) {
@@ -22,14 +24,17 @@ function App() {
 
   return (
     <article className="game">
-   
-      {game.gameOver() ? (
-        <Results questions={game.getResults()} newGameClickHandler={newGame} />
-      ) : (
-        <Question onclick={handelAnswerClicked} question={question} />
-      )}
+    
+          {game.gameOver() ? (
+            <Results
+              questions={game.getResults()}
+              newGameClickHandler={newGame}
+            />
+          ) : (
+            <Question onclick={handelAnswerClicked} question={question} />
+          )}
+       
     </article>
-
   );
 }
 

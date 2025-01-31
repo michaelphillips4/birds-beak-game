@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import { QuestionItem, filesURL } from "./GameManager/QuestionItem";
+import { useState} from "react";
+import { QuestionItem} from "./GameManager/QuestionItem";
+import { filesURL } from "./settings";
 
 const Question = ({
   question,
@@ -8,31 +9,29 @@ const Question = ({
   question: QuestionItem | null;
   onclick: (answer: number) => void;
 }) => {
-  const [fadeIn, setFadeIn] = useState(true);
-  useEffect(() => {
-    setFadeIn(true);
-  }, [question]);
-  return (
-    <section>
-      <img
-        className={`${fadeIn ? "fade-in" : "hide"} question-image`}
-        src={filesURL + question?.image}
-      />
 
+  const [loaded,setLoaded] = useState(false); 
+
+  return (
+    <section >
+    
+      <img className={`question-image ${loaded ? "fade-in" : "hide"}`}
+        src={filesURL + question?.image}
+        onLoad={() => setLoaded(true)}
+      />
       <p className="bird-name">{question?.name}</p>
       <button
         onClick={() => {
-          onclick(0);
-          setFadeIn(false);
+          onclick(0);setLoaded(false)
+         
         }}
       >
         {question?.questions[0]}
       </button>
       <button
         onClick={() => {
-          onclick(1);
-          setFadeIn(false);
-        }}
+          onclick(1);setLoaded(false)
+          }}
       >
         {question?.questions[1]}
       </button>

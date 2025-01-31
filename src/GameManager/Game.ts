@@ -1,5 +1,5 @@
 import QuestionIterator from "./QuestionIterator";
-import { getRandomQuestionSet, allImages } from "./getRandomQuestionSet";
+import { getRandomQuestionSet} from "./getRandomQuestionSet";
 import QuestionItem from "./QuestionItem";
 
 const numberOfQuestionsInGame = 6;

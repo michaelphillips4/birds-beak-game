@@ -7,6 +7,6 @@ export type QuestionItem ={
      index?:number;
 }
 
-export const filesURL = "https://area2-documentsstore.s3.eu-west-2.amazonaws.com/";
+
 
 export default QuestionItem ;

@@ -1,5 +1,5 @@
 import data from "./QuestionsData.json";
-import { QuestionItem, filesURL } from "./QuestionItem";
+import { QuestionItem} from "./QuestionItem";
 
 const getRand = () => Math.floor(Math.random() * data.length);
 
@@ -24,5 +24,4 @@ export const getRandomQuestionSet = (length: number): QuestionItem[] => {
   return currentQuestionSet;
 };
 
-export const allImages = (): string[] =>
-  data.map((item) => filesURL + item.image);
+
