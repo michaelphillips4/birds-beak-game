@@ -34,18 +34,19 @@ h1 {
   font-size: larger;
 }
 
-
 footer {
- margin-top: 10vh;
+  margin-top: 10vh;
 }
 
-
- button {
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font-size: larger;
   margin: 0.5rem;
   border-radius: var(--standard-border-radius);
   box-shadow: none;
-  max-width: 100%; 
+  max-width: 100%;
   width: 150px;
   display: inline-block;
   border: 1px solid silver;
@@ -56,17 +57,18 @@ footer {
   line-height: normal;
 }
 
-.button:focus-visible, button:focus-visible:where(:enabled) {
+.button:focus-visible,
+button:focus-visible:where(:enabled) {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
 }
 
-button:enabled:hover, .button:not([aria-disabled="true"]):hover {
+button:enabled:hover,
+.button:not([aria-disabled="true"]):hover {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   cursor: pointer;
 }
-
 
 .fade-in {
   opacity: 1;

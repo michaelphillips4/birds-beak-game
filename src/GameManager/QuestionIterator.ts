@@ -10,11 +10,6 @@ export default class QuestionIterator {
   }
 
   public hasNext(): boolean {
-    console.log(
-      this.index,
-      this.questions.length,
-      this.index <= this.questions?.length
-    );
     return this.index < this.questions?.length;
   }
 
