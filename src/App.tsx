@@ -2,14 +2,12 @@ import { useState} from "react";
 import Results from "./Results";
 import Question from "./Question";
 import Game from "./GameManager/Game";
-//import ShowAll from "./ShowAll";
 const game = new Game();
 const defaultQuestion = game.nextQuestion();
 
 function App() {
   const [question, setQuestion] = useState(defaultQuestion);
   
-
   const handelAnswerClicked = (answer: number) => {
     if (question) {
       game.setQuestionIsCorrect(answer);

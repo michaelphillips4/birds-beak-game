@@ -39,7 +39,4 @@ export default class Game {
     return this.gameQuestions;
   }
 
-  public allImages(): string[] {
-    return allImages();
-  }
 }
