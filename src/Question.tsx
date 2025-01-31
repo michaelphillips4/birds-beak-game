@@ -20,6 +20,7 @@ const Question = ({
         onLoad={() => setLoaded(true)}
       />
       <p className="bird-name">{question?.name}</p>
+      <div>
       <button
         onClick={() => {
           onclick(0);setLoaded(false)
@@ -35,6 +36,7 @@ const Question = ({
       >
         {question?.questions[1]}
       </button>
+      </div>
     </section>
   );
 };
