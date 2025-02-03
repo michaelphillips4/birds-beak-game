@@ -29,7 +29,7 @@ const Results = ({
           <li key={i}>
             {q.isCorrect ? <>&#10004;</> : <>&#10008;</>} You got this
             {q.isCorrect ? " Correct" : " Wrong"}. A {q.name}{" "}
-            {q.questions[q.answer]}.
+            {q.questions[q.answer].toLowerCase()}.
           </li>
         ))}
       </ol>

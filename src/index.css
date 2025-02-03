@@ -23,6 +23,8 @@ li {
 
 h1 {
   font-size: 3.2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .question-image {
@@ -89,4 +91,18 @@ button:enabled:hover,
   100% {
     opacity: 1;
   }
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-container div
+{
+
+  background-repeat: no-repeat;
+  background-size:contain;
 }
