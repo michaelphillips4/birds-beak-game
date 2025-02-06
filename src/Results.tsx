@@ -24,6 +24,7 @@ const Results = ({
         {infoMessage()} Out of {questions.length} questions you got {totalWins}{" "}
         correct.
       </h3>
+   
       <ol>
         {questions.map((q, i) => (
           <li key={i}>
@@ -33,7 +34,10 @@ const Results = ({
           </li>
         ))}
       </ol>
-      <button onClick={() => newGameClickHandler()}>Play again ?</button>
+      <p>
+        <button onClick={() => newGameClickHandler()}>Play again ?</button>
+      </p>
+      
     </>
   );
 };

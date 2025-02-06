@@ -17,6 +17,12 @@ body {
   margin: auto;
 }
 
+
+ol{
+  display: inline-block;
+
+}
+
 li {
   text-align: left;
 }
