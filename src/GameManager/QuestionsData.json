@@ -24,7 +24,7 @@
       "answer": 0
     },
     {
-      "image": "FDFC70AC-495A-455B-82A1-031264E07240.jpeg",
+      "image": "dunnock.jpeg",
       "name": "Dunnock",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 0
@@ -42,7 +42,7 @@
       "answer": 1
     },
     {
-      "image": "E4BA9D0E-A16F-43C5-8664-125D6E9DF40A.jpeg",
+      "image": "black_headed_gull.jpeg",
       "name": "Black Headed Gull",
       "questions": ["Eats anything", "Eats Seeds"],
       "answer": 0
@@ -72,13 +72,13 @@
       "answer": 0
     },
     {
-      "image": "tern2.jpeg",
+      "image": "tern.jpeg",
       "name": "Tern",
       "questions": ["Eats Bugs", "Eats Fish"],
       "answer": 1
     },
     {
-      "image": "spottedflycatcher.JPG",
+      "image": "spottedflycatcher.jpeg",
       "name": "Spotted fly catcher",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 0
@@ -90,43 +90,43 @@
       "answer": 1
     },
     {
-      "image": "goldfinch.JPG",
+      "image": "goldfinch.jpeg",
       "name": "Gold Finch (Male)",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 1
     },
     {
-      "image": "bullfinch.JPG",
+      "image": "bullfinch.jpeg",
       "name": "Bull finch",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 1
     },
     {
-      "image": "stonechatmale.JPG",
+      "image": "stonechatmale.jpeg",
       "name": "Stone Chat (Male)",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 0
     },
     {
-      "image": "stonechatfemale.JPG",
+      "image": "stonechatfemale.jpeg",
       "name": "Stone Chat (Female)",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 0
     },
     {
-      "image": "greenfinch.JPG",
+      "image": "greenfinch.jpeg",
       "name": "Green Finch",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 1
     },
     {
-      "image": "longtailedtit.JPG",
+      "image": "longtailedtit.jpeg",
       "name": "Long Tailed Tit",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 0
     },
     {
-      "image": "sparrow.JPG",
+      "image": "sparrow.jpeg",
       "name": "Sparrow",
       "questions": ["Eats Bugs", "Eats Seeds"],
       "answer": 1

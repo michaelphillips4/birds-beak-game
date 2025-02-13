@@ -1,1 +1,1 @@
-export const filesURL = "https://area2-documentsstore.s3.eu-west-2.amazonaws.com/";
+export const filesURL = "https://birds2.s3.eu-west-2.amazonaws.com/";

@@ -8,6 +8,7 @@ function getRndInteger(min: number, max: number): number {
 
 const ShowAll = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  const [loaded, setLoaded] = useState(false);
   const breakpoint = 700;
 
   useEffect(() => {
@@ -19,9 +20,13 @@ const ShowAll = () => {
   }, []);
 
   const mobileImageCount = 4;
-  const allImages = data.map((e) => filesURL + e.image);
+ 
+  const allImages = data.map((e) => filesURL + "resized/"+ e.image);
+  
   let images: string[] = [];
-  console.log(images);
+ 
+ 
+ 
   if (width < breakpoint) {
     const m = data.length - mobileImageCount;
     const start = getRndInteger(0, m);
@@ -30,17 +35,24 @@ const ShowAll = () => {
     images = allImages;
   }
 
+
+  console.log(images.length,loaded);
+
+
   return (
-    <div className="flex-container">
-      {images.map((image, i) => (
+    <div className={`flex-container ${loaded ? "fade-in" : "hide"}`} >
+      {images.map((image, i) => 
+      
+      ( 
         <div
-          key={i}
+          key={i}>
+          <img src= {image} 
+            onLoad={() => i === (images.length-1) ? setLoaded(true): false }
           style={{
-            backgroundImage: `url(${image}`,
             height: `calc(100vw / ${images.length})`,
             width: `calc(100vw / ${images.length})`,
-          }}
-        ></div>
+          }}/>
+        </div>
       ))}
     </div>
   );
