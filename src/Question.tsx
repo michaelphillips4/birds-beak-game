@@ -16,6 +16,7 @@ const Question = ({
     <section >
      <img className={`question-image ${loaded ? "fade-in" : "hide"}`}
         src={filesURL + question?.image}
+        alt="{question?.name}"
         onLoad={() => setLoaded(true)}
       />
       <p className="bird-name">{question?.name}</p>

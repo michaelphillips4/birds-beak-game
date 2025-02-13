@@ -1,6 +1,7 @@
 import { filesURL } from "./settings";
 import data from "./GameManager/QuestionsData.json";
 import { useEffect, useState } from "react";
+import QuestionItem from "./GameManager/QuestionItem";
 
 function getRndInteger(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -20,19 +21,16 @@ const ShowAll = () => {
   }, []);
 
   const mobileImageCount = 4;
- 
-  const allImages = data.map((e) => filesURL + "resized/"+ e.image);
-  
-  let images: string[] = [];
- 
+   
+  let images: QuestionItem [];
  
  
   if (width < breakpoint) {
     const m = data.length - mobileImageCount;
     const start = getRndInteger(0, m);
-    images = allImages.slice(start, start + mobileImageCount);
+    images = data.slice(start, start + mobileImageCount);
   } else {
-    images = allImages;
+    images = data;
   }
 
 
@@ -46,8 +44,9 @@ const ShowAll = () => {
       ( 
         <div
           key={i}>
-          <img src= {image} 
-            onLoad={() => i === (images.length-1) ? setLoaded(true): false }
+          <img src= {`${filesURL}resized/${image.image}`} 
+              alt={image.name}
+              onLoad={() => i === (images.length-1) ? setLoaded(true): false }
           style={{
             height: `calc(100vw / ${images.length})`,
             width: `calc(100vw / ${images.length})`,
