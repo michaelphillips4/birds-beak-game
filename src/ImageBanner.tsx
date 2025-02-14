@@ -1,4 +1,4 @@
-import { filesURL } from "./settings";
+
 import data from "./GameManager/QuestionsData.json";
 import { useEffect, useState } from "react";
 import QuestionItem from "./GameManager/QuestionItem";
@@ -7,7 +7,7 @@ function getRndInteger(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const ShowAll = () => {
+const ImageBanner = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [loaded, setLoaded] = useState(false);
   const breakpoint = 700;
@@ -33,10 +33,6 @@ const ShowAll = () => {
     images = data;
   }
 
-
-  console.log(images.length,loaded);
-
-
   return (
     <div className={`flex-container ${loaded ? "fade-in" : "hide"}`} >
       {images.map((image, i) => 
@@ -44,8 +40,9 @@ const ShowAll = () => {
       ( 
         <div
           key={i}>
-          <img src= {`${filesURL}resized/${image.image}`} 
+          <img src= {`images/small/${image.image}`} 
               alt={image.name}
+            
               onLoad={() => i === (images.length-1) ? setLoaded(true): false }
           style={{
             height: `calc(100vw / ${images.length})`,
@@ -58,4 +55,4 @@ const ShowAll = () => {
 
 };
 
-export default ShowAll;
+export default ImageBanner;

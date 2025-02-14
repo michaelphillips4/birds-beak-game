@@ -1,6 +1,5 @@
 import { useState} from "react";
 import { QuestionItem} from "./GameManager/QuestionItem";
-import { filesURL } from "./settings";
 
 const Question = ({
   question,
@@ -15,8 +14,10 @@ const Question = ({
   return (
     <section >
      <img className={`question-image ${loaded ? "fade-in" : "hide"}`}
-        src={filesURL + question?.image}
-        alt="{question?.name}"
+        src={`images/${question?.image}`}
+        alt={question?.name}
+        width="350"
+        height="350"
         onLoad={() => setLoaded(true)}
       />
       <p className="bird-name">{question?.name}</p>
